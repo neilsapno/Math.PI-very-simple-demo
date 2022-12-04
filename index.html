@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 5</title>
+
+    <style>
+        body {
+            background: url("https://i.gifer.com/5JC.gif") no-repeat center center fixed;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            display: block;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-family: "Helvetica", "Arial", sans-serif;
+        }
+
+        h2 {
+            position: relative;
+            bottom: -22em;
+            color: white;
+        }
+
+        button {
+
+            background: none;
+            border: 2px solid;
+            font-weight: bolder;
+            font-size: large;
+            line-height: 1;
+            margin: 0.5em;
+            padding: 1em 2em;
+            color: var(--color);
+            transition: 0.25s;
+            --color: #a10101;
+            --hover: #1973bc;
+            box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+
+        }
+
+        button:hover,
+        button:focus {
+            border-color: var(--hover);
+            color: #fff;
+            box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Math.PI Lab Exercise 5</h1>
+        <button onclick="findCircumference()">Calculate Circumference</button>
+        <button onclick="findArea()">Calculate Area of a Circle</button>
+        <button onclick="findSurface()">Calculate Area of a Sphere</button>
+    </div>
+    <h2>Me while coding the formula</h2>
+
+
+
+    <script>
+        var answer, radius;
+        function findCircumference() {
+            radius = prompt("Enter an integer number corresponding to a circle's radius in inches:", "");
+            answer = 2 * Math.PI * radius;
+            alert("The circumference of a circle having " + radius + "inches is " + answer);
+        }
+
+        function findArea() {
+            radius = prompt("Enter an integer number corresponding to a circle's radius in inches:", "");
+            answer = Math.pow(radius, 2);
+            answer = Math.PI * answer;
+            alert("The area of a circle having " + radius + "inches is " + answer);
+        }
+
+        function findSurface() {
+            radius = prompt("Enter an integer number corresponding to a circle's radius in inches:", "");
+            answer = Math.pow(radius, 2);
+            answer = 4 * Math.PI * answer;
+            alert("The surface area of a sphere having " + radius + "inches is " + answer);
+        }
+
+
+    </script>
+</body>
+
+</html>
